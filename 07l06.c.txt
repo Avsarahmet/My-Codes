@@ -1,0 +1,25 @@
+/*  Reference an array by a pointer */
+#include <stdio.h>
+int main(){
+   int A[10];
+   int i;
+   for (i=0; i<10; i++)
+      A[i] = i + 2;
+   for (i=0; i < 10 ; i++)
+       printf("%2d ",A[i]);
+   printf("\n");    
+   printf( "The start address of the array:   %p\n", A);   
+   printf( "The address of the first element: %p\n", &A[0]);
+   //Accessing the value of the elements of array A by using pointer A 
+   for (i=0; i < 10 ; i++)
+       printf("%2d ",*(A+i));
+   printf("\n");
+   printf("\n");
+   //Accessing the addresses of the elements of array A by using pointer
+   for (i=0; i < 10 ; i++)
+       printf("%p\n",A+i);
+   printf("\n");   
+   return 0;
+   
+}
+
